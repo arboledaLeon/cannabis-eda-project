@@ -9,8 +9,14 @@ data/*.csv
 
 # Entornos virtuales
 venv/
+.venv/
+env/
 .env
 
 # Sistema operativo
 .DS_Store
 Thumbs.db
+
+# Editores
+.vscode/
+*.code-workspace

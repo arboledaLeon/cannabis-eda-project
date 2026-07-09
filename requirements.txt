@@ -1,0 +1,15 @@
+# Dependencias del proyecto (versiones probadas en el entorno de León)
+# Instalar con:  pip install -r requirements.txt
+pandas==2.3.2
+numpy==2.2.3
+matplotlib==3.10.5
+seaborn==0.13.2
+wordcloud==1.9.4
+jupyter
+
+# --- Opcional ---
+# La librería `datasets` de Hugging Face está ROTA en Python 3.13
+# (elimina el módulo `cgi` que una versión vieja de huggingface_hub necesita).
+# No la usamos: cargamos desde data/cannabis_raw.csv, que es más reproducible.
+# Si algún día quieres re-descargar el dataset, usa Python 3.11/3.12:
+# datasets>=2.19
