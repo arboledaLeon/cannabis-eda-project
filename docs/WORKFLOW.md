@@ -14,7 +14,7 @@ Cada loop responde una **pregunta o un bloque temático**, no "hace un gráfico"
    │  3. LIMPIA     Solo lo necesario para responder           │
    │  4. VISUALIZA  El gráfico correcto para la pregunta        │
    │  5. INTERPRETA Escribir en español qué significa           │
-   │  6. CIERRA     Commit + "🎯 Tu turno en VSCode"            │
+   │  6. CIERRA     Commit (avisar; push solo con OK de León)    │
    └─────────────────────────────────────────────────────────┘
 ```
 
@@ -34,19 +34,11 @@ Cada bloque cierra con un **commit** y una tanda de tareas para León.
 
 ## Reparto de trabajo
 
-- **Claude** escribe en el notebook: la teoría del concepto, un análisis modelo (código + gráfico +
-  interpretación en español). El notebook queda completo y legible.
-- **León**, al cerrar cada bloque, recibe **"🎯 Tu turno en VSCode"**: 2-4 retos concretos para extender o
-  replicar el análisis por su cuenta, en el notebook en que estemos. Así refuerza lo aprendido.
-
-Formato del handoff:
-
-```markdown
-## 🎯 Tu turno en VSCode
-1. [Reto concreto con la columna/función a usar]
-2. [Otro reto, un poco más difícil]
-3. [Reto abierto / de interpretación: "¿qué crees que significa X?"]
-```
+- **Claude** escribe TODO en el notebook: la teoría del concepto, el análisis completo (código + gráfico +
+  interpretación en español) y cualquier exploración adicional que valga la pena. El notebook queda
+  **autocontenido y didáctico**.
+- **León aprende leyendo** el notebook. Decidió (2026-07-09) **no** usar secciones de ejercicios
+  "🎯 Tu turno": todos los detalles se incluyen ya resueltos y explicados dentro del EDA.
 
 ## Secuencia de notebooks
 

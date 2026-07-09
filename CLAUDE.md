@@ -32,10 +32,10 @@ en ciencia de datos. Objetivo doble: que quede **profesional y vendible**, y que
 El ciclo completo está en `docs/WORKFLOW.md`. Resumen operativo:
 
 1. **Un loop = un bloque temático** (3-4 preguntas relacionadas resueltas de corrido, sin frenar a pedir OK).
-2. En cada loop Claude: escribe teoría + análisis modelo (código + gráfico + interpretación en español) en
-   el notebook, de forma que el notebook quede **completo y presentable**.
-3. Al cerrar el bloque, Claude entrega una sección **"🎯 Tu turno en VSCode"**: 2-4 tareas concretas para que
-   León extienda ese análisis por su cuenta en el notebook en que estemos.
+2. En cada loop Claude escribe TODO en el notebook: teoría + análisis completo + gráficos + interpretación
+   en español. El notebook queda **autocontenido y didáctico**: León aprende **leyéndolo**.
+3. **NO dejar secciones "Tu turno"/ejercicios.** Todos los detalles y exploraciones van ya resueltos y
+   explicados dentro del EDA (decisión de León, 2026-07-09).
 4. Claude prepara el commit del bloque y **avisa**. León da luz verde para `git push`.
 
 ## ⚠️ Reglas de Git
@@ -87,6 +87,6 @@ memory/                # memoria agéntica sobre León y el proyecto
 
 - ¿La prosa está en español y el código en inglés?
 - ¿Cada gráfico tiene título, ejes etiquetados y una interpretación escrita debajo?
+- ¿El notebook quedó autocontenido y didáctico (todo resuelto y explicado, sin ejercicios pendientes)?
 - ¿Actualizaste `docs/BITACORA.md` con las decisiones tomadas?
-- ¿Dejaste la sección "🎯 Tu turno en VSCode"?
 - ¿Avisaste a León para el commit (sin pushear por tu cuenta)?

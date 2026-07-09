@@ -31,4 +31,13 @@ mantenible que la secuencia 00→03).
 **Por qué:** Reproducible, estable y no depende de una librería rota. El CSV se ignora en git (pesa 11 MB).
 **Alternativas descartadas:** Forzar `datasets` (rota); fijar Python 3.11 solo para cargar (fricción innecesaria).
 
+## [2026-07-09] Loop 1 — Notebooks de carga y exploración
+**Contexto:** Necesitábamos entender los datos antes de limpiarlos.
+**Decisión:** Crear `00_carga_inicial` (carga + primer vistazo) y `01_exploracion` (radiografía). Ejecutados
+con outputs incrustados para que GitHub los muestre completos.
+**Por qué:** Documentamos el hallazgo clave: el "0% de nulos" es engañoso — la basura está escondida en
+columnas constantes (`sale_item`, `most_popular_seeds`), plantilladas (`experience`), números como texto
+(`thc`='21.8%') y multi-etiqueta (`effect`='Relaxed, Energetic'). Esto le da un plan concreto a la limpieza.
+**Alternativas descartadas:** Saltar directo a limpiar (limpieza a ciegas, sin justificación).
+
 <!-- Próximas entradas: decisiones de limpieza (parseo THC, consolidación de tipos), elección de gráficos, etc. -->
