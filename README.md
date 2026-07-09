@@ -4,13 +4,17 @@
 ![Estado](https://img.shields.io/badge/Estado-Completado-success.svg)
 ![Idioma](https://img.shields.io/badge/An%C3%A1lisis-Espa%C3%B1ol-green.svg)
 
-📄 **Reporte visual:** una vez activado GitHub Pages, disponible en
-`https://arboledaleon.github.io/cannabis-eda-project/`
+### 🔗 [**Ver el reporte visual en vivo →**](https://arboledaleon.github.io/cannabis-eda-project/)
 
 > Análisis exploratorio de **8.910 cepas de cannabis** desde una doble perspectiva:
 > **químico-medicinal** (THC, CBD, efectos, usos terapéuticos) y **de mercado** (precios, descuentos, breeders).
 
 Proyecto de portafolio en ciencia de datos. Autor: **León** — Ingeniería Biomédica.
+
+![Valores por defecto por columna](images/07_valores_por_defecto.png)
+
+_El hallazgo central: el dataset parece limpio (0% nulos), pero entre el 52% y 87% de cada columna clave es
+un valor por defecto del scraper. El verdadero trabajo fue separar la señal del relleno._
 
 ## 📊 El dataset
 
@@ -55,6 +59,10 @@ pip install -r requirements.txt
   potencia; THC y CBD tienen correlación moderada negativa (r = −0,69).
 - **Medicina:** usos reales más citados — dolor, estrés, insomnio, ansiedad y depresión.
 - **Mercado:** el precio (mediana £19) lo determina el **breeder** (de £11 a £436, ~40×), **no** la potencia.
+
+| Usos medicinales reales | El precio lo pone la marca |
+|---|---|
+| ![Usos medicinales](images/06_usos_medicinales.png) | ![Precio por breeder](images/10_precio_por_breeder.png) |
 
 El análisis completo y narrado está en [`notebooks/03_eda_narrado.ipynb`](notebooks/03_eda_narrado.ipynb).
 
