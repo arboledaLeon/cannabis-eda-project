@@ -74,4 +74,17 @@ Correlación ≠ causalidad.
 **Corrección honesta:** las primeras interpretaciones (escritas antes de ver los datos) decían "cepa típica
 ~20% THC, distribución simétrica" y "correlación débil" — ambas FALSAS. Se reescribieron tras investigar.
 
-<!-- Próximas entradas: Parte 2 (efectos/medicinal, investigar "Relaxing"), Parte 3 (mercado/precio). -->
+## [2026-07-09] Loop 4 — EDA narrado, Parte 2 (efectos y usos medicinales)
+**Contexto:** Analizar `effect` y `medical_strains` (multi-etiqueta). Confirmamos el sospechoso `Relaxing`.
+**Hallazgos:**
+- `effect` == 'Relaxing' en 76% (default, igual que THC=20). Tras excluirlo, efectos reales variados:
+  energizantes (Euphoric, Creative, Energetic, Focused) vs. sedantes (Sleepy, Relaxed, Calming).
+- `medical_strains` == 'Relaxing' en 52% (default). Condiciones clínicas reales top: General Pain (810),
+  Stress Relief (686), Insomnia (621), Anxiety (521), Depression (391). Coherente con la evidencia.
+- **Meta-hallazgo transversal:** el valor por defecto afecta al 52–87% de cada columna clave
+  (flavor='Citrus' 87%, CBD='Low' 84%, effect='Relaxing' 76%, THC=20% 69%, medical='Relaxing' 52%).
+  Es la firma del scraper. Gráfico 07 lo resume.
+**Decisión:** para efectos/medicinal, excluir las filas que solo traen el default antes de explotar y contar.
+**Gráficos nuevos:** 05_top_efectos, 06_usos_medicinales, 07_valores_por_defecto.
+
+<!-- Próxima entrada: Parte 3 (mercado/precio) y reporte final GitHub Pages. -->
