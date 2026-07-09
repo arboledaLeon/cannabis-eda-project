@@ -87,4 +87,16 @@ Correlación ≠ causalidad.
 **Decisión:** para efectos/medicinal, excluir las filas que solo traen el default antes de explotar y contar.
 **Gráficos nuevos:** 05_top_efectos, 06_usos_medicinales, 07_valores_por_defecto.
 
-<!-- Próxima entrada: Parte 3 (mercado/precio) y reporte final GitHub Pages. -->
+## [2026-07-09] Loop 5 — EDA narrado, Parte 3 (mercado) + conclusiones generales
+**Contexto:** Cerrar el análisis con el ángulo comercial.
+**Hallazgos:**
+- Precio muy sesgado a la derecha: mediana £19, media £82, máx £999. Se usa la mediana como medida honesta.
+- Descuento casi constante: 97% de las cepas al 40% → estrategia comercial permanente, no ofertas reales.
+- La química **no** explica el precio: corr precio-THC(real) ≈ −0,18, precio-CBD ≈ 0,24, precio-nº efectos ≈ 0.
+- El **breeder sí** manda: precio medio de £11 (Victory Seeds) a £436 (Night Owl Seeds), ~40× de diferencia.
+**Conclusión global del EDA:** catálogo comercial de semillas de alta potencia y bajo CBD, con datos muy
+imputados (52–87% por defecto), donde el precio responde al prestigio de la marca, no a la química declarada.
+**Gráficos:** 08_distribucion_precio, 09_correlaciones_precio, 10_precio_por_breeder.
+**Estado:** `03_eda_narrado` COMPLETO (Partes 1-3 + conclusiones, 10 gráficos). Pendiente: reporte GitHub Pages.
+
+<!-- Próxima entrada: reporte final para GitHub Pages. -->
