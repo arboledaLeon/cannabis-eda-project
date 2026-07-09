@@ -24,11 +24,13 @@ PALETTE = {
     "gray": "#616161",        # texto secundario
 }
 
-# Colores fijos por tipo de cepa, para que Indica/Sativa/Híbrido siempre tengan el mismo color.
+# Colores fijos por tipo de cepa, para que Indica/Sativa/Híbrido siempre tengan el mismo color
+# en TODOS los gráficos (el color sigue a la entidad, no al orden). Paleta validada para
+# daltonismo con el script de la guía de dataviz (pasa las 6 comprobaciones en modo claro).
 TYPE_COLORS = {
-    "Indica": "#6a1b9a",
-    "Sativa": "#ef6c00",
-    "Híbrido": "#2e7d32",
+    "Indica": "#9c4dcc",   # morado
+    "Sativa": "#ef6c00",   # naranja
+    "Híbrido": "#2e7d32",  # verde
     "Desconocido": "#9e9e9e",
 }
 

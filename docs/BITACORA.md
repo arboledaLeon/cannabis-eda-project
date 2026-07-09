@@ -55,4 +55,23 @@ columnas constantes (`sale_item`, `most_popular_seeds`), plantilladas (`experien
 **Hallazgo a vigilar:** el efecto `Relaxing` domina de forma sospechosa (~7000/8910) → posible valor por
 defecto del scraper. Investigar en el 03 antes de sacar conclusiones sobre efectos.
 
-<!-- Próximas entradas: elección de gráficos del EDA narrado, análisis de precio, etc. -->
+## [2026-07-09] Loop 3 — EDA narrado, Parte 1 (perfil químico) + hallazgo de calidad de datos
+**Contexto:** Primeros gráficos (histogramas THC/CBD, boxplot por tipo, scatter THC-CBD). Al *mirar* los
+gráficos (no solo ejecutarlos) detectamos anomalías graves.
+**Hallazgos de calidad de datos (críticos):**
+- **THC:** 69% (6.151) vale exactamente 20,0% → valor por defecto del scraper. Hay THC = −20% (imposible).
+  15% son texto (`High`, `Very High`) → NaN. Solo ~16% (1.415) tiene THC numérico creíble.
+- **CBD:** 84% dice la palabra `Low`; solo ~10% (878) tiene valor numérico. Los numéricos confirman: CBD bajo,
+  sesgo positivo (media 1,81 > mediana 1,00). Etiqueta y número coinciden.
+- **THC real por tipo:** Indica 21,7 > Híbrido 21,0 > Sativa 19,4 (tendencia leve, cajas se solapan).
+- **THC vs CBD:** r = −0,69 (moderada, negativa), estable al quitar el default; n = 701 pares numéricos.
+**Decisiones:**
+- Analizar THC solo sobre el subconjunto real (`thc_pct != 20` y en 0–100%).
+- Dejar el histograma THC "feo" a propósito: es el disparador didáctico de la investigación.
+- Paleta de `TYPE_COLORS` revalidada para daltonismo (morado Indica → #9c4dcc para pasar la banda de luminosidad).
+**Lección destacada en el notebook:** detectar datos imputados/por-defecto ANTES de sacar promedios.
+Correlación ≠ causalidad.
+**Corrección honesta:** las primeras interpretaciones (escritas antes de ver los datos) decían "cepa típica
+~20% THC, distribución simétrica" y "correlación débil" — ambas FALSAS. Se reescribieron tras investigar.
+
+<!-- Próximas entradas: Parte 2 (efectos/medicinal, investigar "Relaxing"), Parte 3 (mercado/precio). -->
