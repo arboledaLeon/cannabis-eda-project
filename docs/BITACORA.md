@@ -99,4 +99,12 @@ imputados (52–87% por defecto), donde el precio responde al prestigio de la ma
 **Gráficos:** 08_distribucion_precio, 09_correlaciones_precio, 10_precio_por_breeder.
 **Estado:** `03_eda_narrado` COMPLETO (Partes 1-3 + conclusiones, 10 gráficos). Pendiente: reporte GitHub Pages.
 
-<!-- Próxima entrada: reporte final para GitHub Pages. -->
+## [2026-07-09] Loop 6 — Reporte visual (GitHub Pages + Artifact)
+**Contexto:** Entregable final de portafolio: una página web limpia con la narrativa y las gráficas estrella.
+**Decisiones de diseño:** identidad botánica (papel verde-tenue, verde hoja, ámbar para hallazgos de datos),
+display serif "guía de campo" + cuerpo sans + mono para cifras, temas claro/oscuro, columna de lectura 760px,
+gráficas en tarjetas blancas (se ven bien en ambos temas). Sin webfonts (CSP) → stacks de sistema.
+**Entregables:** `index.html` en la raíz (para GitHub Pages, imágenes relativas) + versión autocontenida
+(base64) publicada como Artifact para previsualización inmediata.
+**Curaduría:** 7 de las 10 gráficas (07 como tesis, 03/04 química, 05/06 efectos, 08/10 mercado).
+**Pendiente (manual de León):** activar GitHub Pages en Settings → Pages → source: main / root.

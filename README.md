@@ -1,8 +1,11 @@
 # 🌿 Cannabis Strains — Análisis Exploratorio de Datos (EDA)
 
 ![Python](https://img.shields.io/badge/Python-3.13-blue.svg)
-![Estado](https://img.shields.io/badge/Estado-En%20progreso-yellow.svg)
+![Estado](https://img.shields.io/badge/Estado-Completado-success.svg)
 ![Idioma](https://img.shields.io/badge/An%C3%A1lisis-Espa%C3%B1ol-green.svg)
+
+📄 **Reporte visual:** una vez activado GitHub Pages, disponible en
+`https://arboledaleon.github.io/cannabis-eda-project/`
 
 > Análisis exploratorio de **8.910 cepas de cannabis** desde una doble perspectiva:
 > **químico-medicinal** (THC, CBD, efectos, usos terapéuticos) y **de mercado** (precios, descuentos, breeders).
@@ -44,9 +47,16 @@ pip install -r requirements.txt
 # El dataset ya está en data/cannabis_raw.csv. Abre los notebooks en orden (00 → 03).
 ```
 
-## 📈 Resultados
+## 📈 Resultados principales
 
-_En construcción — se irán agregando los hallazgos y gráficos al avanzar el análisis._
+- **Calidad de datos:** el "0% de nulos" es engañoso — entre el **52% y 87%** de cada columna clave es un
+  valor por defecto del scraper (THC=20%, CBD='Low', efecto='Relaxing', sabor='Citrus').
+- **Química:** catálogo de **alto THC y bajo CBD**; el tipo Indica/Sativa/Híbrido apenas diferencia la
+  potencia; THC y CBD tienen correlación moderada negativa (r = −0,69).
+- **Medicina:** usos reales más citados — dolor, estrés, insomnio, ansiedad y depresión.
+- **Mercado:** el precio (mediana £19) lo determina el **breeder** (de £11 a £436, ~40×), **no** la potencia.
+
+El análisis completo y narrado está en [`notebooks/03_eda_narrado.ipynb`](notebooks/03_eda_narrado.ipynb).
 
 ---
 <sub>Análisis y documentación en español; código en inglés (estándar profesional).</sub>
