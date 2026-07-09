@@ -40,4 +40,19 @@ columnas constantes (`sale_item`, `most_popular_seeds`), plantilladas (`experien
 (`thc`='21.8%') y multi-etiqueta (`effect`='Relaxed, Energetic'). Esto le da un plan concreto a la limpieza.
 **Alternativas descartadas:** Saltar directo a limpiar (limpieza a ciegas, sin justificación).
 
-<!-- Próximas entradas: decisiones de limpieza (parseo THC, consolidación de tipos), elección de gráficos, etc. -->
+## [2026-07-09] Loop 2 — Limpieza y features
+**Contexto:** La exploración dejó un plan claro de 5 problemas a resolver.
+**Decisiones:**
+- THC/CBD/rendimientos/alturas/floración: texto → número (`pct_to_float`, `extract_number`), con sufijos
+  `_pct`/`_num`/`_days` para distinguir las columnas numéricas de las originales.
+- `indica_sativa` (15 variantes) → `type_simple` con 3 categorías (Indica 5507, Sativa 2100, Híbrido 1303).
+  Regla: si menciona ambas o "50%" → Híbrido (salvo que un "dominant" desempate).
+- `type_ratio` → `indica_pct` / `sativa_pct` numéricos.
+- Features nuevas: `num_effects`, `num_flavors`, `num_medical`, `savings_gbp`.
+- Eliminadas columnas basura (`NOISE_COLS`).
+- Resultado guardado en `data/cannabis_clean.csv`.
+**Por qué:** Separar "preparar datos" de "analizar". A partir del 03 se carga `clean(load_raw())` en una línea.
+**Hallazgo a vigilar:** el efecto `Relaxing` domina de forma sospechosa (~7000/8910) → posible valor por
+defecto del scraper. Investigar en el 03 antes de sacar conclusiones sobre efectos.
+
+<!-- Próximas entradas: elección de gráficos del EDA narrado, análisis de precio, etc. -->
